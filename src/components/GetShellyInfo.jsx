@@ -38,8 +38,8 @@ export default function GetShellyInfo(){
             {
             loading ? <h3>Loading...</h3> : 
             <ul>
-                <li>Voltage: {voltage}</li>
                 <li>Id: {id}</li>
+                <li>Voltage: {voltage}</li>
                 <li>Source: {source}</li>
                 <li>Output: {output}</li>
                 <li>Apower: {apower}</li>
