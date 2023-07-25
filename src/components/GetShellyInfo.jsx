@@ -37,7 +37,13 @@ export default function GetShellyInfo(){
         <div>
             {
             loading ? <h3>Loading...</h3> : 
-            <p>Voltage:{voltage} Id: {id} Source: {source} output{output} apower: {apower}</p>
+            <ul>
+                <li>Voltage: {voltage}</li>
+                <li>Id: {id}</li>
+                <li>Source: {source}</li>
+                <li>Output: {output}</li>
+                <li>Apower: {apower}</li>
+            </ul>
             }
         </div>
     )
