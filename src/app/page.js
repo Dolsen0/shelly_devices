@@ -10,7 +10,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
      <div className='container'>
-     <h1>Shelly Device</h1>
+     <h1>Shelly Plug Plus US</h1>
       <GetShellyInfo />
       <GetRestart />
      </div>
