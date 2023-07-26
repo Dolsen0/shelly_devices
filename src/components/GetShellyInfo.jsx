@@ -9,11 +9,12 @@ export default function GetShellyInfo(){
     const [output, setOutput] = useState("")
     const [apower, setApower] = useState("")
     const [voltage, setVoltage] = useState("")
+    const [temperature, setTemperature] = useState("")
     
     
     useEffect(() => {
-        // fetch('http://192.168.33.1/rpc/Shelly.GetStatus')
-        fetch('http://localhost:3000/home')
+        fetch('http://192.168.33.1/rpc/Shelly.GetStatus')
+        // fetch('http://localhost:3000/home')
         .then(res => res.json())
         .then(data => {
         let shellyInfo  = (data['switch:0'])
@@ -22,11 +23,13 @@ export default function GetShellyInfo(){
         setOutput(shellyInfo['output'])
         setApower(shellyInfo['apower'])
         setVoltage(shellyInfo['voltage'])
+        setTemperature(Math.round(shellyInfo['temperature']['tF']))
 
         setShellyInfo(shellyInfo)
         setLoading(false)
         
-        console.log(voltage)
+        console.log(shellyInfo)
+        console.log(temperature)
             
         })
         .catch(err => console.log(err))
@@ -39,8 +42,9 @@ export default function GetShellyInfo(){
             loading ? <h3>Loading...</h3> : 
             <ul>
                 <li>Id: {id}</li>
-                <li>Voltage: {voltage}</li>
                 <li>Source: {source}</li>
+                <li>Temperature: {temperature}°F</li>
+                <li>Voltage: {voltage}</li>
                 <li>Output: {output}</li>
                 <li>Apower: {apower}</li>
             </ul>
