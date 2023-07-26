@@ -9,9 +9,11 @@ export default function Home() {
     <>
     <main className={styles.main}>
       <div className={styles.description}>
+     <div className='container'>
      <h1>Shelly Device</h1>
       <GetShellyInfo />
       <GetRestart />
+     </div>
       </div>
     </main>
     </>
