@@ -1,4 +1,3 @@
-'use client'
 import React, {useState, useEffect} from 'react';
 
 export default function GetShellyInfo(){
@@ -13,8 +12,8 @@ export default function GetShellyInfo(){
     
     
     useEffect(() => {
-        fetch('http://192.168.33.1/rpc/Shelly.GetStatus')
-        // fetch('http://localhost:3000/home')
+        // fetch('http://192.168.33.1/rpc/Shelly.GetStatus')
+        fetch('http://localhost:3000/home')
         .then(res => res.json())
         .then(data => {
         let shellyInfo  = (data['switch:0'])

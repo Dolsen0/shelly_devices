@@ -115,3 +115,8 @@ ul{
 li{
   padding: .15rem;
 }
+
+.btn__restart{
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
