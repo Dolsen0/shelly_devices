@@ -6,6 +6,6 @@ export default function GetRestart() {
             // fetch('http://192.168.33.1/rpc/Switch.Toggle?id=0')
             fetch('http://localhost:3000/home/restart')
             .catch(err => console.log(err))
-        }}>Restart</button>
+        }}>Power</button>
     )
 }
