@@ -4,6 +4,7 @@ import ReactSlider from 'react-slider';
 export default function LightSlider(){
     const [value, setValue] = useState(50);
     return(
+    
         <ReactSlider
             className="horizontal-slider"
             thumbClassName="example-thumb"
