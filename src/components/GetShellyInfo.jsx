@@ -9,7 +9,7 @@ export default function GetShellyInfo({ loading, id, source, output, apower, aen
           <li>Power: {wasOn ? 'On' : 'Off'}</li>
           <li>Temperature: {temperature}°F</li>
           <li>Apower: {apower}</li>
-          <li>Acc. Energy (minutes): {aenergy}</li>
+          <li>Acc. Energy (total): {aenergy}</li>
           <li>Voltage: {voltage}</li>
           <li>Id: {id}</li>
           <li>Source: {source}</li>
