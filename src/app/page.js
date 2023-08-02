@@ -5,6 +5,7 @@ import styles from './page.module.css'
 import GetShellyInfo from '@/components/GetShellyInfo'
 import GetRestart from '@/components/GetRestart'
 import LightSlider from '@/components/LightSlider'
+import GetConfig from '@/components/GetConfig'
 
 
 export default function Home() {
@@ -60,6 +61,7 @@ export default function Home() {
               wasOn={wasOn}
             />
             <GetRestart setWasOn={setWasOn} />
+            <GetConfig />
           </div>
         </div>
       </main>
