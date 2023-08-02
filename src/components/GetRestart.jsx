@@ -2,8 +2,8 @@ import React from "react";
 
 export default function GetRestart({ setWasOn }) {
   const handleClick = () => {
-    fetch('http://localhost:3000/home/restart', { // fetch endpoint
-      method: 'POST', // change to a POST request
+    fetch('http://localhost:3000/home/restart', {
+      method: 'POST',
     })
     .then(res => res.json())
     .then(data => {
