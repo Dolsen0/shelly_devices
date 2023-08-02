@@ -14,6 +14,7 @@ export default function Home() {
   const [source, setSource] = useState("")
   const [output, setOutput] = useState("")
   const [apower, setApower] = useState("")
+  const [aenergy, setAenergy] = useState("")
   const [voltage, setVoltage] = useState("")
   const [temperature, setTemperature] = useState("")
   const [wasOn, setWasOn] = useState("");
@@ -27,6 +28,7 @@ export default function Home() {
         setSource(shellyInfo['source'])
         setOutput(shellyInfo['output'])
         setApower(shellyInfo['apower'])
+        setAenergy(shellyInfo['aenergy']['total'])
         setVoltage(shellyInfo['voltage'])
         setTemperature(Math.round(shellyInfo['temperature']['tF']))
         setWasOn(shellyInfo['output']);
@@ -52,6 +54,7 @@ export default function Home() {
               source={source} 
               output={output} 
               apower={apower} 
+              aenergy={aenergy} 
               voltage={voltage} 
               temperature={temperature} 
               wasOn={wasOn}
