@@ -8,7 +8,7 @@ export default function GetConfig() {
     const pass = event.target.password.value;
 
     try {
-      const response = await fetch('/home/config', {
+      const response = await fetch('http://localhost:3000/home/config', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
