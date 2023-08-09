@@ -16,6 +16,8 @@ export default function GetConfig() {
         body: JSON.stringify({ ssid, pass }),
       });
 
+      
+
       const data = await response.json();
       console.log(data);
     } catch (error) {
